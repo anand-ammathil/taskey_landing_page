@@ -1,0 +1,84 @@
+//Colors
+
+$brand-color: #ff6c37;
+$brand-blue: #9594d2;
+$white: #fff;
+$black: #000;
+
+//Fonts
+$heading-font: CoHealdineBold, Arial, Helvetica Neue, sans-serif;
+$body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
+
+// CSS
+.home {
+  .hero {
+    background: $brand-color;
+
+    h1 {
+      font-size: 4rem;
+      font-family: $heading-font;
+      color: $white;
+      text-shadow: #a84724 0px 4px 4px;
+    }
+    p {
+      color: $white;
+      @screen sm {
+        max-width: 326px;
+      }
+    }
+  }
+
+  .cta {
+    background: $brand-color;
+    color: $white;
+    .content {
+      max-width: 800px;
+
+      .ctaBtn {
+        background: $white;
+        color: $black;
+        max-width: 526px;
+        height: 60px;
+        line-height: 60px;
+        text-decoration: none;
+        box-shadow: #cc562c 0px 4px 4px;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          box-shadow: #a84724 0px 8px 16px;
+        }
+      }
+    }
+  }
+
+  .services {
+    background: $white;
+
+    .service {
+      * {
+        transition: all 0.2s ease-in-out;
+      }
+      .title {
+        height: 120px;
+
+        @screen sm {
+          height: 80px;
+        }
+        h2 {
+          font-family: $body-font;
+          font-size: 1.26rem;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: $brand-blue;
+  }
+}
