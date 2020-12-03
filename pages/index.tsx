@@ -44,8 +44,16 @@ const Home: FC = () => {
       {/* Hero Section */}
       <div className={["w-screen p-8", styles.hero].join(" ")}>
         <div className="container mx-auto flex flex-col sm:flex-row">
-          <div className="w-full sm:w-1/2 flex flex-col justify-center text-center sm:text-left">
-            <h1>We are Taskey!</h1>
+          <div className="w-full sm:w-1/6"></div>
+          <div className="w-full sm:w-4/6 flex flex-col justify-evenly items-center text-center">
+            {/* <h1>We are Taskey!</h1> */}
+            <img
+              src="/logo-white.svg"
+              className="mb-8"
+              alt="Taskey"
+              width={350}
+              height="auto"
+            />
             <p>
               Whether you stress over a broken wardrobe or believe in washing
               off worries with a pedicure, we have a Genie to suit your type! At
@@ -54,41 +62,41 @@ const Home: FC = () => {
             </p>
           </div>
 
-          <div className="w-full sm:w-1/2 flex flex-col justify-center items-center sm:items-end my-8 sm:my-0">
+          <div className="w-full sm:w-1/6 flex flex-col justify-center items-center sm:items-end my-8 sm:my-0">
             <img
               src="/icon-outline.svg"
-              className="w-auto -mr-10 h-60 sm:h-96"
+              className={["w-auto -mr-10 h-60", styles.emblem].join(" ")}
               alt="emblem"
             />
           </div>
         </div>
-      </div>
 
-      {/* Call to action */}
-      <div className={["px-8 flex flex-col", styles.cta].join(" ")}>
-        <div
-          className={[
-            "mx-auto py-8 flex flex-col text-center",
-            styles.content,
-          ].join(" ")}
-        >
-          <p>
-            As we get set for our launch in <strong>August 2021</strong> , we
-            are in the process of handpicking local home service experts who can
-            be our Genies.We are looking for partners in the below mentioned
-            categories. If you are a skilled worker in Cochin looking to scale
-            your business, reach out to us!
-          </p>
-
-          <a
-            href="tel:9020256525"
+        {/* Call to action */}
+        <div className={["px-8 flex flex-col", styles.cta].join(" ")}>
+          <div
             className={[
-              "my-8 self-center w-full rounded-full",
-              styles.ctaBtn,
+              "mx-auto flex flex-col text-center",
+              styles.content,
             ].join(" ")}
           >
-            Call/ WhatsApp - 9020256525
-          </a>
+            <p>
+              As we get set for our launch in <strong>August 2021</strong>, we
+              are in the process of handpicking local home service experts who
+              can be our Genies.We are looking for partners in the below
+              mentioned categories. If you are a skilled worker in Cochin
+              looking to scale your business, reach out to us!
+            </p>
+
+            <a
+              href="tel:9020256525"
+              className={[
+                "mt-8 mb-10 self-center w-full rounded-full px-4",
+                styles.ctaBtn,
+              ].join(" ")}
+            >
+              Call/ WhatsApp - 9020256525
+            </a>
+          </div>
         </div>
       </div>
 

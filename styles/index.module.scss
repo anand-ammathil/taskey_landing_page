@@ -22,8 +22,15 @@ $body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
     }
     p {
       color: $white;
+      font-size: 1.2rem;
       @screen sm {
-        max-width: 326px;
+        max-width: 800px;
+      }
+    }
+
+    .emblem {
+      @screen sm {
+        height: 48vh;
       }
     }
   }
@@ -31,6 +38,9 @@ $body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
   .cta {
     background: $brand-color;
     color: $white;
+    p {
+      font-size: 1.2rem;
+    }
     .content {
       max-width: 800px;
 
@@ -43,9 +53,16 @@ $body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
         text-decoration: none;
         box-shadow: #cc562c 0px 4px 4px;
         transition: all 0.2s ease-out;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: $heading-font;
 
         &:hover {
           box-shadow: #a84724 0px 8px 16px;
+        }
+        @screen sm {
+          font-size: 1.26rem;
         }
       }
     }
