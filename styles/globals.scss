@@ -1,25 +1,5 @@
 @import "./tailwind.css";
 
-//Fonts
-@font-face {
-  font-family: "CoHealdineBold";
-  src: url("../public/fonts/co_headline_w01_bold-webfont.woff2") format("woff2"),
-    url("../public/fonts/co_headline_w01_bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "CoHealdineRegular";
-  src: url("../public/fonts/co_headline_w01_regular-webfont.woff2")
-      format("woff2"),
-    url("../public/fonts/co_headline_w01_regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   font-size: 14px;
 }
@@ -30,6 +10,7 @@ body {
   margin: 0;
   font-family: CoHealdineRegular, Helvetica Neue, sans-serif;
   overflow-x: hidden;
+  background-color: #ff6c37;
 }
 
 a {

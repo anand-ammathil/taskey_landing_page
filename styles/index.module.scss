@@ -6,8 +6,29 @@ $white: #fff;
 $black: #000;
 
 //Fonts
+@font-face {
+  font-family: "CoHealdineBold";
+  src: url("../public/fonts/co_headline_w01_bold-webfont.woff2") format("woff2"),
+    url("../public/fonts/co_headline_w01_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "CoHealdineRegular";
+  src: url("../public/fonts/co_headline_w01_regular-webfont.woff2")
+      format("woff2"),
+    url("../public/fonts/co_headline_w01_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 $heading-font: CoHealdineBold, Arial, Helvetica Neue, sans-serif;
 $body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
+
+//Fonts
 
 // CSS
 .home {
@@ -22,9 +43,10 @@ $body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
     }
     p {
       color: $white;
-      font-size: 1.2rem;
+      font-size: 1rem;
       @screen sm {
         max-width: 800px;
+        font-size: 1.2rem;
       }
     }
 
@@ -39,38 +61,35 @@ $body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
     background: $brand-color;
     color: $white;
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      @screen sm {
+        font-size: 1.2rem;
+      }
     }
-    .content {
-      max-width: 800px;
+    .ctaBtn {
+      background: $white;
+      color: $black;
+      max-width: 526px;
+      height: 60px;
+      line-height: 60px;
+      text-decoration: none;
+      box-shadow: #cc562c 0px 4px 4px;
+      transition: all 0.2s ease-out;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: $heading-font;
 
-      .ctaBtn {
-        background: $white;
-        color: $black;
-        max-width: 526px;
-        height: 60px;
-        line-height: 60px;
-        text-decoration: none;
-        box-shadow: #cc562c 0px 4px 4px;
-        transition: all 0.2s ease-out;
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: bold;
-        font-family: $heading-font;
-
-        &:hover {
-          box-shadow: #a84724 0px 8px 16px;
-        }
-        @screen sm {
-          font-size: 1.26rem;
-        }
+      &:hover {
+        box-shadow: #a84724 0px 8px 16px;
+      }
+      @screen sm {
+        font-size: 1.26rem;
       }
     }
   }
 
   .services {
-    background: $white;
-
     .service {
       * {
         transition: all 0.2s ease-in-out;
@@ -84,6 +103,24 @@ $body-font: CoHealdineRegular, Arial, Helvetica Neue, sans-serif;
         h2 {
           font-family: $body-font;
           font-size: 1.26rem;
+        }
+      }
+      .thumb {
+        height: 170px;
+        width: 170px;
+        overflow: hidden;
+        @screen sm {
+          height: 250px;
+          width: 250px;
+        }
+        img {
+          height: 170px;
+          width: 170px;
+          object-fit: cover;
+          @screen sm {
+            height: 250px;
+            width: 250px;
+          }
         }
       }
 
