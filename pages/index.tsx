@@ -21,29 +21,41 @@ const Home: FC = () => {
 
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 400,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     touchMove: true,
-    vertical: true,
-    verticalSwiping: true,
-    className: "center",
-    centerMode: true,
-    centerPadding: "0"
-    // responsive: [
-    //   {
-    //     breakpoint: 640,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 1,
-    //       vertical: true,
-    //       verticalSwiping: true,
-    //     },
-    //   },
-    // ],
+    // vertical: false,
+    // verticalSwiping: false,
+    className: "center mb-2 mt-4 mx-8",
+    // centerMode: true,
+    // centerPadding: "0",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   const serviceList: Array<Service> = [
@@ -115,85 +127,84 @@ const Home: FC = () => {
       {/* Hero Section */}
       <div
         className={[
-          "w-screen h-screen flex flex-col text-center sm:text-left sm:overflow-hidden",
+          "w-screen h-screen flex flex-col justify-center text-center sm:text-left",
           styles.hero,
         ].join(" ")}
       >
-        <div className="container mx-auto flex flex-col sm:flex-row">
-          <div className="w-full sm:w-1/2 flex flex-col justify-center items-start px-4">
+        <div className="container h-full justify-center mx-auto flex flex-col">
+          <div className="w-full xl:h-full xl:justify-evenly  flex flex-col justify-center items-start px-4">
             {/* <h1>We are Taskey!</h1> */}
             <img
               src="/logo-white.svg"
-              className="mb-8"
+              className="mb-8 mx-auto"
               alt="Taskey"
-              width={350}
+              width={250}
               height="auto"
             />
-            <p className="mb-4">
+            <p className="mb-4 text-center">
               Whether you stress over a broken wardrobe or believe in washing
               off worries with a pedicure, we have a Genie to suit your type! At
               Taskey, our aim is to make hassle-free home services available to
               you at the tap of a key.
               <br />
               <br />
-              As we get set for our launch in <strong>August 2021</strong>, we
+              As we get set for our launch in <strong className={[styles.highlight, "mx-2"].join(" ")}>August 2021,</strong> we
               are in the process of handpicking local home service experts who
               can be our Genies. We are looking for partners in the below
               mentioned categories. If you are a skilled worker in Cochin
               looking to scale your business, reach out to us!
             </p>
+            <div
+              className={[
+                "w-full flex flex-col justify-center sm:my-0",
+                ,
+                styles.services,
+              ].join(" ")}
+            >
+              <Slider {...settings}>
+                {serviceList.map((service, i) => {
+                  return (
+                    <div
+                      className={[
+                        "w-1/2 sm:w-1/5 flex flex-col justify-center flex-wrap items-center",
+                        styles.service,
+                      ].join(" ")}
+                      key={i}
+                    >
+                      <div className={[styles.thumb, "mx-auto"].join(" ")}>
+                        <img
+                          src={`${service.img}`}
+                          alt={service.name}
+                          width={170}
+                          height={170}
+                          className="rounded-full mx-auto"
+                        />
+                        <div
+                          className={[
+                            "py-2 mt-2 text-center flex flex-col justify-start items-center",
+                            styles.title,
+                          ].join(" ")}
+                        >
+                          <h2>{service.name}</h2>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
 
-            <div className={["flex flex-col", styles.cta].join(" ")}>
+            <div className={["flex flex-row justify-center self-center", styles.cta].join(" ")}>
               <a
                 href="tel:9020256525"
                 className={[
-                  "mt-8 mb-10 self-center rounded-full w-full px-4 text-center",
+                  "my-4 self-center inline-flex rounded-full w-full px-4 text-center",
                   styles.ctaBtn,
                 ].join(" ")}
               >
                 Call/ WhatsApp - 9020256525
               </a>
             </div>
-          </div>
-
-          <div
-            className={[
-              "w-full sm:h-screen sm:w-1/2 flex flex-col justify-center sm:my-0",
-              ,
-              styles.services,
-            ].join(" ")}
-          >
-            <Slider {...settings}>
-              {serviceList.map((service, i) => {
-                return (
-                  <div
-                    className={[
-                      "w-1/2 sm:w-1/5 p-8 flex flex-col justify-center flex-wrap items-center",
-                      styles.service,
-                    ].join(" ")}
-                    key={i}
-                  >
-                    <div className={[styles.thumb, "mx-auto"].join(" ")}>
-                      <img
-                        src={`${service.img}`}
-                        alt={service.name}
-                        width={170}
-                        height={170}
-                        className="rounded-full"
-                      />
-                      <div
-                        className={[
-                          "py-2 mt-2 text-center flex flex-col justify-start items-center",
-                          styles.title,
-                        ].join(" ")}
-                      >
-                        <h2>{service.name}</h2>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </Slider>
           </div>
         </div>
 

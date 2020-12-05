@@ -28,10 +28,28 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-.slick-slide{
-  transform: scale(0.5);
-}
-.slick-center{
-  transform: scale(1.5);
-}
+// .slick-slide{
+//   transform: scale(0.5);
+// }
+// .slick-center{
+//   transform: scale(1.5);
+// }
 
+.slick-prev:before,
+.slick-next:before
+{
+  font-family: 'slick';
+  font-size: 40px;
+  line-height: 1;
+
+  opacity: .75;
+  color: white;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev,
+.slick-next{
+  width: 35px;
+  height: 35px;
+}
