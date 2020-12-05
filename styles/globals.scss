@@ -8,7 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: CoHealdineRegular, Helvetica Neue, sans-serif;
+  //font-family: CoHealdineRegular, Helvetica Neue, sans-serif;
   overflow-x: hidden;
   background-color: #ff6c37;
 }
@@ -21,3 +21,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.slick-slide,
+.slick-slide * {
+  outline: none !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.slick-slide{
+  transform: scale(0.5);
+}
+.slick-center{
+  transform: scale(1.5);
+}
+

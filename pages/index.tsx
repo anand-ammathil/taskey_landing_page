@@ -4,6 +4,7 @@ import { FC, useState, useEffect } from "react";
 import styles from "styles/index.module.scss";
 import Image from "next/image";
 import Slider from "react-slick";
+import Fonts from "components/font/font";
 
 interface Service {
   name: string;
@@ -15,17 +16,34 @@ const Home: FC = () => {
   useEffect(() => {
     let todayDate: number = new Date().getFullYear();
     setDate(todayDate.toString());
+    Fonts();
   }, []);
 
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    speed: 400,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     touchMove: true,
+    vertical: true,
+    verticalSwiping: true,
+    className: "center",
+    centerMode: true,
+    centerPadding: "0"
+    // responsive: [
+    //   {
+    //     breakpoint: 640,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 1,
+    //       vertical: true,
+    //       verticalSwiping: true,
+    //     },
+    //   },
+    // ],
   };
 
   const serviceList: Array<Service> = [
@@ -80,8 +98,7 @@ const Home: FC = () => {
         <link rel="icon" href="/icon.svg" />
         <meta
           name="description"
-          content="Whether you stress over a broken wardrobe or believe in washing off worries with a pedicure, we have a Genie to suit your type!  At Taskey, our aim is to make hassle-free home services available to you at the tap of a key. 
-	"
+          content="Whether you stress over a broken wardrobe or believe in washing off worries with a pedicure, we have a Genie to suit your type!  At Taskey, our aim is to make hassle-free home services available to you at the tap of a key."
         />
         <link
           rel="stylesheet"
@@ -98,12 +115,12 @@ const Home: FC = () => {
       {/* Hero Section */}
       <div
         className={[
-          "w-screen h-screen p-8 text-center sm:text-left",
+          "w-screen h-screen flex flex-col text-center sm:text-left sm:overflow-hidden",
           styles.hero,
         ].join(" ")}
       >
         <div className="container mx-auto flex flex-col sm:flex-row">
-          <div className="w-full sm:w-1/2 flex flex-col justify-center items-center">
+          <div className="w-full sm:w-1/2 flex flex-col justify-center items-start px-4">
             {/* <h1>We are Taskey!</h1> */}
             <img
               src="/logo-white.svg"
@@ -116,22 +133,21 @@ const Home: FC = () => {
               Whether you stress over a broken wardrobe or believe in washing
               off worries with a pedicure, we have a Genie to suit your type! At
               Taskey, our aim is to make hassle-free home services available to
-              you at the tap of a key. 
+              you at the tap of a key.
+              <br />
+              <br />
+              As we get set for our launch in <strong>August 2021</strong>, we
+              are in the process of handpicking local home service experts who
+              can be our Genies. We are looking for partners in the below
+              mentioned categories. If you are a skilled worker in Cochin
+              looking to scale your business, reach out to us!
             </p>
 
-            <div className={["mx-auto flex flex-col", styles.cta].join(" ")}>
-              <p>
-                As we get set for our launch in <strong>August 2021</strong>, we
-                are in the process of handpicking local home service experts who
-                can be our Genies.We are looking for partners in the below
-                mentioned categories. If you are a skilled worker in Cochin
-                looking to scale your business, reach out to us!
-              </p>
-
+            <div className={["flex flex-col", styles.cta].join(" ")}>
               <a
                 href="tel:9020256525"
                 className={[
-                  "mt-8 mb-10 self-center w-full rounded-full px-4 text-center",
+                  "mt-8 mb-10 self-center rounded-full w-full px-4 text-center",
                   styles.ctaBtn,
                 ].join(" ")}
               >
@@ -157,25 +173,22 @@ const Home: FC = () => {
                     ].join(" ")}
                     key={i}
                   >
-                    <div
-                      className={[styles.thumb, "rounded-full mx-auto"].join(
-                        " "
-                      )}
-                    >
+                    <div className={[styles.thumb, "mx-auto"].join(" ")}>
                       <img
                         src={`${service.img}`}
                         alt={service.name}
                         width={170}
                         height={170}
+                        className="rounded-full"
                       />
-                    </div>
-                    <div
-                      className={[
-                        "py-2 mt-2 text-center flex flex-col justify-start items-center",
-                        styles.title,
-                      ].join(" ")}
-                    >
-                      <h2>{service.name}</h2>
+                      <div
+                        className={[
+                          "py-2 mt-2 text-center flex flex-col justify-start items-center",
+                          styles.title,
+                        ].join(" ")}
+                      >
+                        <h2>{service.name}</h2>
+                      </div>
                     </div>
                   </div>
                 );
