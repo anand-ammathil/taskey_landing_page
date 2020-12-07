@@ -33,6 +33,7 @@ const Home: FC = () => {
     className: "center mb-2 mt-4 mx-8",
     // centerMode: true,
     // centerPadding: "0",
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -83,22 +84,22 @@ const Home: FC = () => {
     {
       name: "Painting",
       img:
-        "https://www.tourisme-saint-cyprien.com/sites/default/files/styles/ogimage/public/sit/images/L6613LAR066V5148V9/AdobeStock-302770002.jpg?itok=Y-v9Gc4H",
+        "/services/painting.jpeg",
     },
     {
       name: "Catering Service",
       img:
-        "https://images.pexels.com/photos/6270/woman-flowers-holidays-girl-6270.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "/services/catering.jpg",
     },
     {
       name: "Event Photography",
       img:
-        "https://images.unsplash.com/photo-1593055786307-4ea24359c1e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80",
+        "/services/photography.jpeg",
     },
     {
       name: "Gardening",
       img:
-        "https://images.unsplash.com/photo-1586280268958-9483002d016a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1362&q=80",
+        "/services/gardening.jpeg",
     },
     { name: "Pickup & Delivery", img: "/services/Photo@2x-9.png" },
   ];
