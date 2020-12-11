@@ -63,12 +63,12 @@ const Home: FC = () => {
     {
       name: "Cleaning & Housekeeping",
       img:
-        "https://images.unsplash.com/photo-1601160458000-2b11f9fa1a0e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        "/services/cleaning.jpg",
     },
     {
       name: "Electronics & Appliance Repairing",
       img:
-        "https://images.unsplash.com/photo-1576613109753-27804de2cba8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=80",
+        "/services/electronics.jpg",
     },
     {
       name: "Wellness & Grooming",
@@ -81,7 +81,7 @@ const Home: FC = () => {
     {
       name: "Automobile Servicing",
       img:
-        "https://images.pexels.com/photos/97075/pexels-photo-97075.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=500",
+      "/services/automobile.jpeg",
     },
     {
       name: "Painting",
@@ -126,7 +126,7 @@ const Home: FC = () => {
       {/* Hero Section */}
       <div
         className={[
-          "container m-auto w-screen flex flex-col text-center sm:text-left",
+          "container m-auto flex flex-col text-center sm:text-left",
           styles.hero,
         ].join(" ")}
       >
@@ -270,7 +270,7 @@ const Home: FC = () => {
             </svg>
           </div>
 
-          <p className="mb-4 text-center">
+          <p className="mb-4 text-center w-full">
             Whether you stress over a broken wardrobe or believe in washing off
             worries with a pedicure, we have a Genie to suit your type! At
             Taskey, our aim is to make hassle-free home services available to
@@ -285,7 +285,7 @@ const Home: FC = () => {
             {/* <strong className={[styles.highlight, "mx-2"].join(" ")}>
               
             </strong> */}
-            Launching in August 2021…
+            
           </p>
           <div
             className={[
@@ -294,15 +294,19 @@ const Home: FC = () => {
             ].join(" ")}
           >
             <a
-              href="tel:+9190202565255"
+              href="tel:+919020256525"
               className={[
                 "mt-4 mb-8 self-center inline-flex rounded-full w-full px-4 text-center",
                 styles.ctaBtn,
               ].join(" ")}
             >
-              Call/ WhatsApp: +91-9020252565
+              Call/ WhatsApp: +91 9020256525
             </a>
+            
           </div>
+          <p className="text-center self-center my-4 text-black" style={{color:"black"}}>
+            Launching in August 2021…
+            </p>
           <div
             className={[
               "w-full flex flex-col justify-center sm:my-0",
