@@ -284,7 +284,7 @@ const Home: FC = () => {
             <br />
             <a href="tel:+919020256525"><strong className={[styles.highlight, "mx-2"].join(" ")}>
               Call/ WhatsApp: +91 9020256525
-            </strong>  <a/>
+            </strong>  </a>
           </p>
           <div
             className={[
