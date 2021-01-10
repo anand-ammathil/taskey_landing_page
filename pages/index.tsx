@@ -282,10 +282,9 @@ const Home: FC = () => {
             worker in Cochin looking to scale your business, reach out to us!
             <br />
             <br />
-            {/* <strong className={[styles.highlight, "mx-2"].join(" ")}>
-              
-            </strong> */}
-            
+            <a href="tel:+919020256525"><strong className={[styles.highlight, "mx-2"].join(" ")}>
+              Call/ WhatsApp: +91 9020256525
+            </strong>  <a/>
           </p>
           <div
             className={[
@@ -294,13 +293,13 @@ const Home: FC = () => {
             ].join(" ")}
           >
             <a
-              href="tel:+919020256525"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdxWxhVb7-q49BeOJHoDDbjKD8eKN6M_l52zPnn04rvt92BnA/viewform"
               className={[
                 "mt-4 mb-8 self-center inline-flex rounded-full w-full px-4 text-center",
                 styles.ctaBtn,
               ].join(" ")}
             >
-              Call/ WhatsApp: +91 9020256525
+              Register here
             </a>
             
           </div>
