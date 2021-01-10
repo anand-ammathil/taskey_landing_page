@@ -282,7 +282,7 @@ const Home: FC = () => {
             worker in Cochin looking to scale your business, reach out to us!
             <br />
             <br />
-            <a href="tel:+919020256525"><strong className={[styles.highlight, "mx-2"].join(" ")}>
+            <a href="tel:+919020256525"><strong className={[styles.highlight, "mx-2 tracking-wide"].join(" ")}>
               Call/ WhatsApp: +91 9020256525
             </strong>  </a>
           </p>
